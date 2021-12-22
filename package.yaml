@@ -1,0 +1,31 @@
+name:                linear-algebra
+version:             0.1.0.0
+github:              "matthewhughes3/linear-algebra"
+license:             BSD3
+author:              "Matthew Hughes"
+maintainer:          "matthewhughes3@tutanota.com"
+copyright:           "2021 Matthew Hughes"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/matthewhughes3/linear-algebra#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  linear-algebra-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - linear-algebra
+    - hspec
